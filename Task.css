@@ -1,0 +1,171 @@
+:root{
+  --bg:#f5f7fa;
+  --text:#222;
+  --card:#fff;
+  --primary:#2563eb;
+}
+
+.dark{
+  --bg:#121212;
+  --text:#fff;
+  --card:#1e1e1e;
+  --primary:#60a5fa;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  transition:.3s;
+}
+
+header{
+  background:var(--card);
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
+  position:sticky;
+  top:0;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+}
+
+.logo{
+  color:var(--primary);
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--text);
+}
+
+#themeBtn{
+  border:none;
+  background:var(--primary);
+  color:white;
+  padding:10px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:3rem;
+}
+
+.hero span{
+  color:var(--primary);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:var(--primary);
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+}
+
+section{
+  padding:80px 10%;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:30px;
+  color:var(--primary);
+}
+
+.skills-grid,
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card,
+.project-card{
+  background:var(--card);
+  padding:25px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+form{
+  max-width:600px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input,
+textarea{
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+form button{
+  padding:12px;
+  border:none;
+  background:var(--primary);
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:var(--card);
+}
+
+@media(max-width:768px){
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+}
